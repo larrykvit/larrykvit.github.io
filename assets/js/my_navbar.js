@@ -4,8 +4,8 @@
 	// side bar
     $('.bs-docs-sidenav').affix({
       offset: {
-        top: function () { return 290 }
-      , bottom: 270
+        top: function () { return 120 }
+      , bottom: 470
       }
     })
   })
