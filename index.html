@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="utf-8" />
 		<meta name="robots" content="noindex" />
 		<title>Ilarion Kvitnevskiy</title>
 		<link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -16,9 +17,8 @@
 	<header class="jumbotron subhead" id="overview">
 		<div class="container-fluid">
 			<div class="row-fluid">
-			<div class="span6"><h1>Ilarion Kvitnevskiy</h1></div>
-			<div class="span6"><h1>/ Projects</h1></div>
-			</h1>
+				<div class="span6"><h1>Ilarion Kvitnevskiy</h1></div>
+				<div class="span6"><h1>/ Projects</h1></div>
 			</div>
 		</div>
 	</header>
@@ -26,6 +26,7 @@
 		<div class="row-fluid">
 			<div class="span3 bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav affix-top">
+						<li class=""><a href="#id_last_turret"><i class="icon-chevron-right"></i> L.A.S.T.</a></li>
 						<li class=""><a href="#id_quad"><i class="icon-chevron-right"></i> Project Overlord</a></li>
 						<li class=""><a href="#id_motiondetect"><i class="icon-chevron-right"></i> Motion Detection Suite</a></li>
 						<li class=""><a href="#id_turret"><i class="icon-chevron-right"></i> Project Artemis</a></li>
@@ -35,12 +36,37 @@
 			
 
 			
-			<div class="span9">
+		<div class="span9">
+				<div class="row-fluid">
+					<section id="id_last_turret">
+						<div class="span4">
+							<div class="row">
+							<img src="assets/img/last_turret.JPG" class="img-rounded" alt="Lonely autonomous turret">
+							</div>
+						</div>
+						<div class="span5">
+							<h1>Lonely Autonomous Sentry Turret (L.A.S.T.)</h1>
+							<p>
+							
+								This was the final project for my first year progamming and hardware courses (joint project between MTE 100 and GENE 121). This was a group project done with 3 other people. The turret tracked moving targets and shot any target closer than a certain distance. The motion detection was done on a laptop, and the target position was sent to an Arduino. The Arduino controlled the servos, and the nerf gun. </p>
+								<p></p>
+								<p>Since this was a 2~3 week project, I mostly focused on the motion detection. I created a motion algorithm that was O(n), n being the pixels in the image.</p>
+							<ul>
+								<li>Bullet</li>
+								<li>Ported and integrated an open-source library for communications with an existing ground control station via TCP/IP over WiFi.</li>
+								<li>Derived linearly independent control vectors, created multiple mechanical rigs for tuning those vectors.</li>
+								<li>Soldered and assembled the components.</li>
+								<li><a href="http://www.youtube.com/watch?v=2z2uKEWA9NI">Robofest 2012 competition Video submission</a></li>
+								<li><a href="https://github.com/larrykvit/quadcopter_flight_software">GITHUB LINK</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
 				<div class="row-fluid">
 					<section id="id_quad">
 						<div class="span4">
 							<div class="row">
-							<img src="assets/img/quad/DSCN7754_025.JPG" class="img-rounded">
+							<img src="assets/img/quad/DSCN7754_025.JPG" class="img-rounded" alt="Quadcopter">
 							</div>
 							<!--<div class="row">
 							<iframe  src="http://www.youtube.com/embed/2z2uKEWA9NI" frameborder="0" allowfullscreen></iframe>
@@ -68,15 +94,15 @@
 					<section id="id_motiondetect">
 						<div class="span4">
 						<div class="row">
-							<a href="assets/img/image_m6.png"><img src="assets/img/image_m6_033.png" class="img-rounded"></a>
+							<a href="assets/img/image_m6.png"><img src="assets/img/image_m6_033.png" class="img-rounded" alt="Motion detection suite"></a>
 							</div>
 						</div>
 						<div class="span5">
 							<h1>Motion Detection Suite</h1>
 							<p>This program was created in collaboration with a classmate as a final project for my grade 12 Computer Science class. The program would read in a series of images, detect moving objects, and track targets between the frames. <a href="assets/img/image_m6.png">HERE</a> is a larger version of the thumbnail to the left - the target box and the motion path lines can be seen better. The images were taken from <a href="http://www.youtube.com/watch?v=0tEHQJn_hxo">THIS</a> video.</p>
-							<p>
 							<p></p>
-							<p>The program reads in two images at a time: the current image and the background image. It compares the pixels of the current image to the background image, and if the difference is big enough, the pixel is labelled as a “motion pixel”. Then, touching pixels are grouped into targets. The program searches for other targets in previous frames that are similar to the current target, and draws possible motion lines.</p>
+							<p></p>
+							<p>The program reads in two images at a time: the current image and the background image. It compares the pixels of the current image to the background image, and if the difference is big enough, the pixel is labelled as a "motion pixel". Then, touching pixels are grouped into targets. The program searches for other targets in previous frames that are similar to the current target, and draws possible motion lines.</p>
 							<ul>
 								<li>The project was done for the final project of grade 12 Computer Science.</li>
 								<li>The program was written in C++.</li>
@@ -84,7 +110,7 @@
 								<li>Created and implemented software to analyze a series of frames to detect and track moving objects.</li>
 								<li>Optimized algorithms for motion detection and noise reduction.</li>
 								<li><a href="https://github.com/larrykvit/Motion_Detection_Suite">GITHUB LINK</a>.</li>
-							</ul></p>
+							</ul>
 						</div>
 					</section>
 				</div>
@@ -92,20 +118,20 @@
 					<section id="id_turret">
 						<div class="span4">
 						<div class="row">
-							<img src="assets/img/turret.JPG" class="img-rounded">
+							<img src="assets/img/turret.JPG" class="img-rounded" alt="Artemis">
 						</div>
 						</div>
 						<div class="span5">
 							<h1>The Artemis Project</h1>
 							<p>The project was Aurora High School's robotics team entry for the Robofest exhibition games.
 							The project was to build an autonomous turret that tracks moving targets using a webcam.</p>
-							<p>
+							<p></p>
 							<ul>
 								<li>Received TARDEC (Tank Automotive Research, Development and Engineering Center) grant at the Robofest World Championship 2010.</li>
 								<li>Designed the mechanical structure of the turret.</li>
 								<li>Developed iPod touch control of the turret.</li>
 								<li><a href="http://www.artemis.cheshire.ca/artemis.html">Robofest 2010 competition Video submission</a>.
-							</ul></p>
+							</ul>
 						</div>
 					</section>
 				</div>
